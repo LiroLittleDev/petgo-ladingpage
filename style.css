@@ -155,7 +155,7 @@ p { font-size: 1.2rem; margin-bottom: 1.5rem; }
 /* Ajustes leves para tornar a .hero responsiva em celulares
    - Não altera HTML; somente empilha conteúdo, reduz fontes e imagem
    - Usa !important para contornar width inline na imagem quando necessário */
-@media (max-width: 768px) {
+@media (max-width: 970px) {
   .hero {
     padding-top: 90px;
     min-height: auto;
@@ -375,7 +375,7 @@ blockquote strong { color: #4AA0D5; font-weight: 900; }
 @media (max-width: 768px) {
   .mission h2 { font-size: 2.8rem; }
   .transformation { gap: 20px; padding: 30px 15px; }
-  .step .icon { width: 90px; height: 90px; font-size: 3.5rem; }
+  .step .icon { width: 200px; height: 200px; font-size: 3.5rem; }
   blockquote { font-size: 1.6rem; }
 }
 
@@ -529,6 +529,13 @@ blockquote strong { color: #4AA0D5; font-weight: 900; }
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0,0,0,0.08);
   transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza conteúdo do card */
+  padding: 0; /* garantimos que a imagem ocupe totalmente a largura do card */
+  margin: 1.5rem auto; /* centraliza o card na coluna */
+  width: 100%;
+  max-width: 760px; /* limita largura do card à largura das imagens */
 }
 .testimonial-card:hover {
   transform: translateY(-12px);
@@ -537,12 +544,20 @@ blockquote strong { color: #4AA0D5; font-weight: 900; }
 
 .before-after {
   display: flex;
+  width: 100%;
+  max-width: 760px;
   height: 220px;
   overflow: hidden;
 }
 
+/* Forçar imagens dos depoimentos preencherem completamente sem espaços brancos */
+.testimonial-card { padding: 0; }
+.before-after { width: 100%; margin: 0; padding: 0; }
+.image-wrapper { padding: 0; margin: 0; box-sizing: border-box; background: transparent !important; }
+.image-wrapper img { display: block; width: 100% !important; height: 100% !important; object-fit: cover; object-position: center; }
+
 .image-wrapper {
-  flex: 1;
+  flex: 1 1 50%;
   position: relative;
   overflow: hidden;
 }
@@ -580,6 +595,9 @@ blockquote strong { color: #4AA0D5; font-weight: 900; }
   font-size: 1.15rem;
   line-height: 1.6;
   color: #333;
+  width: 100%;
+  max-width: 760px;
+  text-align: center; /* centraliza texto abaixo das imagens */
 }
 
 .testimonial-text p {
@@ -596,6 +614,35 @@ blockquote strong { color: #4AA0D5; font-weight: 900; }
 @media (max-width: 480px) {
   .before-after { height: 180px; }
   .testimonial-text { padding: 18px; font-size: 1rem; }
+}
+
+/* Ajustes específicos para imagens de depoimentos em mobile: lado a lado */
+@media (max-width: 768px) {
+  .before-after {
+    flex-direction: row !important;
+    align-items: stretch;
+    gap: 0 !important; /* remove any white gap between images */
+    height: 180px !important; /* uniform visual height on mobile */
+  }
+  .image-wrapper {
+    width: 50% !important;
+    height: 100% !important;
+    flex: 0 0 50% !important;
+    display: block;
+    background: transparent !important; /* ensure no white background */
+  }
+  .image-wrapper img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .before-after { gap: 6px; height: 140px !important; }
+  .image-wrapper { width: 50% !important; }
+  .image-wrapper img { max-height: none; height: 100% !important; }
 }
 
 .cta-final {
@@ -741,4 +788,121 @@ footer {
   h1 { font-size: 2.8rem; }
   h2 { font-size: 2.2rem; }
   .btn-primary { font-size: 1.3rem; padding: 16px 30px; }
+}
+
+/* Mobile fixes: apply targeted overrides to ensure proper layout on small screens
+   These rules do not change HTML structure; they only adjust sizes, spacing
+   and stacking behavior so the page reads well on phones. */
+@media (max-width: 768px) {
+  /* Ensure hero content stacks predictably (works with current HTML) */
+  .hero .hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 18px !important;
+    padding: 20px 16px !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Make hero image fluid and remove hard inline width impact */
+  .hero-image-wrapper { width: 100%; max-width: 380px; }
+  .hero-image { max-width: 100% !important; width: auto !important; height: auto; border-radius: 18px; }
+
+  /* Reduce sizes of journey / mission images */
+  .journey-icon { width: 300px; height: 300px; }
+  .journey-item { text-align: center; }
+  .journey-label { font-size: 1.4rem; }
+
+  /* Feature cards: reduce padding and icon sizes to avoid overflow */
+  .feature-card { padding: 28px !important; }
+  .icon-wrapper { width: 200px !important; height: 200px !important; }
+  .feature-icon { width: 200px !important; height: 200px !important; object-fit: contain; margin-bottom: 12px; }
+
+  /* Testimonials: stack before/after vertically on narrow screens */
+  .before-after { flex-direction: column !important; height: auto !important; }
+  .image-wrapper { height: auto; }
+  .testimonial-text { padding: 16px !important; }
+
+  /* CTA adjustments */
+  .btn-cta-huge { padding: 18px 28px !important; font-size: 1.3rem !important; }
+
+  /* Small tweaks to headings and buttons for readability */
+  .mission h2, .section-title { font-size: 2.2rem !important; }
+  .final-line { font-size: 1.2rem !important; }
+}
+
+@media (max-width: 480px) {
+  .hero .hero-content { padding: 16px 12px !important; gap: 14px !important; }
+  .hero h1 { font-size: 1.9rem !important; }
+  .hero p, .trust-text { font-size: 0.95rem !important; }
+  .btn-primary { padding: 12px 20px !important; font-size: 1rem !important; }
+  .journey-icon { width: 100px; height: 100px; }
+  .feature-card { padding: 20px !important; }
+  .icon-wrapper { width: 68px !important; height: 68px !important; }
+  .feature-icon { width: 40px !important; height: 40px !important; }
+  .testimonial-text { font-size: 0.98rem !important; }
+}
+
+/* Final override for mobile (<768px) — consolida regras e resolve conflitos
+   These rules use !important where necessary to ensure consistent behavior
+   across existing duplicated/overlapping media queries. */
+@media (max-width: 768px) {
+  /* Hero stacking */
+  .hero { padding-top: 90px !important; }
+  .hero .hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 18px !important;
+    padding: 20px 16px !important;
+    width: 100% !important;
+  }
+  .hero-image { max-width: 360px !important; width: 90% !important; height: auto !important; border-radius: 18px !important; }
+
+  /* Features icons reasonable size on mobile */
+  .feature-card { padding: 28px !important; }
+  .icon-wrapper { width: 140px !important; height: 140px !important; }
+  .feature-icon { width: 120px !important; height: 120px !important; }
+
+  /* Testimonials: force consistent side-by-side layout without gaps */
+  .testimonials-grid { gap: 16px !important; }
+  .testimonial-card { max-width: 760px !important; margin: 1rem auto !important; padding: 0 !important; }
+  .before-after {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    width: 100% !important;
+    height: 180px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .image-wrapper {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  .image-wrapper img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+  }
+  .testimonial-text { padding: 16px !important; text-align: center !important; width: 100% !important; max-width: 760px !important; }
+
+  /* Smaller screens refinement */
+  @media (max-width: 480px) {
+    .before-after { height: 140px !important; }
+    .image-wrapper { width: 50% !important; }
+    .image-wrapper img { height: 100% !important; }
+    .feature-card { padding: 20px !important; }
+  }
 }
