@@ -15,4 +15,14 @@ document.addEventListener("DOMContentLoaded", function() {
       span.style.animation = `fadeIn 0.05s forwards ${i * 0.06}s`;
     });
   }
+  // Garantir que a página sempre abra no topo (logo visível)
+  try {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  } catch (e) {
+    // ignore
+  }
+  // pequenas esperas garantem que navegadores que restauram scroll não sobreponham
+  window.scrollTo(0, 0);
+  setTimeout(() => window.scrollTo(0, 0), 50);
+  setTimeout(() => window.scrollTo(0, 0), 250);
 });

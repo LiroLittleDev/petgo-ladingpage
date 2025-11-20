@@ -133,24 +133,20 @@ p { font-size: 1.2rem; margin-bottom: 1.5rem; }
   margin-bottom: 1rem;
   color: #1F497D;
 }
-.highlight { color: #4AA0D5; font-weight: 800; }
+
 .typewriter {
   overflow: hidden;
   border-right: 3px solid #4AA0D5;
   white-space: nowrap;
   animation: typing 4s steps(40) 1s forwards, blink 0.8s infinite;
 }
-.hero-video {
-  max-width: 500px;
-  margin: 3rem auto;
-  border-radius: 30px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+
+.hero h1 span {
+  font-size: 2.5rem;
 }
-.hero-video video, .hero-video img {
-  width: 100%;
-  display: block;
-}
+
+.highlight { color: #4AA0D5; font-weight: 800; }
+
 
 /* Ajustes leves para tornar a .hero responsiva em celulares
    - Não altera HTML; somente empilha conteúdo, reduz fontes e imagem
@@ -172,7 +168,7 @@ p { font-size: 1.2rem; margin-bottom: 1.5rem; }
   }
 
   .hero-image-wrapper { max-width: 360px; width: 100%; }
-  .hero-image { width: 80% !important; max-width: 340px; height: auto; border-radius: 20px; }
+  .hero-image { width: 50% !important; max-width: 340px; height: auto; border-radius: 20px; }
 
   .hero h1 { font-size: 2.4rem; line-height: 1.15; }
   .hero p { font-size: 1rem; }
@@ -186,6 +182,13 @@ p { font-size: 1.2rem; margin-bottom: 1.5rem; }
   .typewriter { border-right-width: 2px; }
   .hero-image { width: 90% !important; max-width: 300px; }
   .btn-primary { padding: 12px 22px; font-size: 1rem; border-radius: 40px; }
+}
+
+/* Very small phones: reduce hero logo to avoid pushing text and improve layout */
+@media (max-width: 360px) {
+  .hero-image-wrapper { max-width: 180px !important; }
+  .hero-image { max-width: 50px !important; width: 55% !important; height: auto !important; }
+  .hero h1 { font-size: 1.6rem !important; }
 }
 
 /* Botão Principal */
