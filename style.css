@@ -550,7 +550,7 @@ blockquote strong { color: #4AA0D5; font-weight: 900; }
   overflow: hidden;
 }
 
-/* Forçar imagens dos depoimentos preencherem completamente sem espaços brancos */
+/* Forçar imagens dos depoimentos preencherem completamente sem espaços branco */
 .testimonial-card { padding: 0; }
 .before-after { width: 100%; margin: 0; padding: 0; }
 .image-wrapper { padding: 0; margin: 0; box-sizing: border-box; background: transparent !important; }
