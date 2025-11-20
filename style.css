@@ -906,3 +906,59 @@ footer {
     .feature-card { padding: 20px !important; }
   }
 }
+
+/* Hero: responsive overrides for <=768px (consolidated) */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto !important;
+    padding-top: 80px !important;
+    text-align: center !important;
+  }
+
+  /* container: stack vertically and center */
+  .hero .hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 16px !important;
+    padding: 20px 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* hero image sizing */
+  .hero-image-wrapper {
+    width: 100% !important;
+    max-width: 420px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .hero-image {
+    width: 92% !important;
+    max-width: 420px !important;
+    height: auto !important;
+    border-radius: 18px !important;
+    display: block !important;
+  }
+
+  /* Headings and paragraph sizes for mobile */
+  .hero h1 { font-size: 2.2rem !important; line-height: 1.15 !important; }
+  .hero h1 .typewriter { display: inline-block !important; }
+  .hero p { font-size: 1rem !important; max-width: 560px !important; }
+
+  /* CTA button: full width but constrained */
+  .btn-primary {
+    width: auto !important;
+    max-width: 420px !important;
+    padding: 12px 26px !important;
+    font-size: 1.05rem !important;
+    border-radius: 40px !important;
+  }
+
+  .trust-text { font-size: 0.95rem !important; }
+
+  /* ensure hero-video elements also scale */
+  .hero-video, .hero-video img, .hero-video video { max-width: 420px !important; width: 92% !important; height: auto !important; }
+}
