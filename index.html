@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetGo • Encontre, Ajude, Acolha</title>
+    <meta
+      name="description"
+      content="App gratuito para encontrar e ajudar animais abandonados perto de você."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icone-logotrans.png" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-inner">
+        <!-- Logo + Nome -->
+        <a href="#" class="logo-wrapper">
+          <img
+            src="assets/petgo-logoletral.jpg"
+            alt="PetGo Logo"
+            class="logo-icon"
+          />
+          <span class="logo-text"> Pet<span class="highlight">Go</span> </span>
+        </a>
+
+        <!-- Pata pulsante + texto animado -->
+        <div class="header-right">
+          <div class="paw-wrapper">
+            <span class="paw-text">Todo animal merece um lar</span>
+            <img src="assets/patinha-azul.png" alt="Pata pulsante" class="logo-icon">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-content">
+        <!-- Imagem estática com animação suave de "respiração" + coração pulsando -->
+        <div class="hero-image-wrapper" data-aos="fade-up" data-aos-delay="800">
+          <img
+            src="assets/icone-logotrans.png"
+            alt="Cãozinho e gatinho sendo acolhidos com amor"
+            class="hero-image"
+            style="width: 400px"
+          />
+        </div>
+
+        <h1 data-aos="fade-up" data-aos-delay="200">
+          <span class="typewriter">PetGo: Encontre, Ajude, Acolha.</span><br />
+          <span class="highlight">Amor que Salva Vidas!</span>
+        </h1>
+
+        <p data-aos="fade-up" data-aos-delay="600">
+          A comunidade que conecta você aos animais abandonados<br
+            class="mobile-br"
+          />
+          e a quem pode transformar suas histórias.
+        </p>
+
+        <!-- Botão principal -->
+        <a
+          href="src/app-release.apk"
+          class="btn-primary"
+          data-aos="zoom-in"
+          data-aos-delay="1100"
+        >
+          <img
+            src="assets/android-icone.png"
+            alt="Android"
+            class="android-icon"
+          />
+          Baixar Grátis (APK)
+        </a>
+
+        <p class="trust-text" data-aos="fade-up" data-aos-delay="1300">
+          100% gratuito • Sem anúncios • Instalação segura e rápida
+        </p>
+      </div>
+    </section>
+
+<!-- Missão – A seção mais emocionante do site -->
+<section class="mission">
+  <div class="container mission-wrapper">
+
+    <h2 data-aos="fade-up">
+      Milhares de patinhas<br>
+      <span class="highlight">ainda esperam por você</span>
+    </h2>
+
+    <div class="mission-content" data-aos="fade-up" data-aos-delay="200">
+      <p class="strong">
+        O PetGo existe para transformar essa dor em esperança — e em lares cheios de amor.
+      </p>
+    </div>
+
+    <!-- Animação linda: Patinha → Coração → Casa -->
+    <div class="journey" data-aos="fade-up" data-aos-delay="500">
+      <div class="journey-item">
+        <img src="assets/journey-saddog.png" alt="Patinha na rua" class="journey-icon">
+        <span class="journey-label">Na rua, com medo</span>
+      </div>
+
+      <div class="journey-line"></div>
+
+      <div class="journey-item">
+        <img src="assets/journey-finddog.png" alt="Encontrado com amor" class="journey-icon">
+        <span class="journey-label">Encontrado por você</span>
+      </div>
+
+      <div class="journey-line"></div>
+
+      <div class="journey-item">
+        <img src="assets/journey-happydog.png" alt="Lar para sempre" class="journey-icon">
+        <span class="journey-label">Com uma família para sempre</span>
+      </div>
+    </div>
+
+    <p class="final-line" data-aos="fade-up" data-aos-delay="900">
+      Uma foto. Um toque. Uma vida salva.<br>
+      <strong>É simples assim.</strong>
+    </p>
+
+  </div>
+</section>
+
+    <!-- Como Funciona -->
+  <!-- Funcionalidades -->
+<section class="features">
+  <div class="container">
+    <h2 data-aos="fade-up" class="section-title">
+      Tudo o app que você sempre quis para ajudar animais
+    </h2>
+
+    <div class="features-grid">
+      <!-- Card 1 - Mapa -->
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="icon-wrapper pulse">
+          <img src="assets/icon-map.jpg" alt="Mapa com patinhas" class="feature-icon">
+        </div>
+        <h3>Encontre patinhas perto de você</h3>
+        <p>
+          Mapa em tempo real com fotos, raça, situação e contato direto de quem precisa de ajuda agora.
+        </p>
+        <div class="mini-badge">Atualizado a cada minuto</div>
+      </div>
+
+      <!-- Card 2 - Registrar -->
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="icon-wrapper pulse">
+          <img src="assets/icon-camera.png" alt="Tirar foto" class="feature-icon">
+        </div>
+        <h3>Registre em 30 segundos</h3>
+        <p>
+          Encontrou um animal na rua? Tire a foto, marque o local e publique. Alguém vai resgatar.
+        </p>
+        <div class="mini-badge">Simples como postar uma foto</div>
+      </div>
+
+      <!-- Card 3 - Doação -->
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="icon-wrapper pulse">
+          <img src="assets/icon-cofre.png" alt="Doação" class="feature-icon">
+        </div>
+        <h3>Doe com amor, acompanhe o impacto</h3>
+        <p>
+          Cada real vai direto para ração, castração e tratamento. Você vê exatamente quem foi ajudado.
+        </p>
+        <div class="mini-badge">100% transparente</div>
+      </div>
+
+      <!-- Card 4 - Rede de apoio -->
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="icon-wrapper pulse">
+          <img src="assets/icon-rede.png" alt="Rede completa" class="feature-icon">
+        </div>
+        <h3>Sua rede completa de cuidado</h3>
+        <p>
+          Petshops com desconto, clínicas 24h, ração delivery e veterinários parceiros — tudo num toque.
+        </p>
+        <div class="mini-badge">Parcerias exclusivas</div>
+      </div>
+
+      <!-- Card 5 - Alertas urgentes -->
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="icon-wrapper pulse">
+          <img src="assets/icone-findnotif.png" alt="Alertas em tempo real" class="feature-icon">
+        </div>
+        <h3>Alertas em tempo real</h3>
+        <p>
+          Receba notificações instantâneas quando um animal em perigo for registrado perto de você.
+        </p>
+        <div class="mini-badge">Você chega primeiro</div>
+      </div>
+
+      <!-- Card 6 - Histórias felizes -->
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+        <div class="icon-wrapper pulse">
+          <img src="assets/icon-finalhappy.png" alt="Histórias de amor" class="feature-icon">
+        </div>
+        <h3>Acompanhe o final feliz</h3>
+        <p>
+          Veja a transformação completa: do resgate até o novo lar. Cada adoção vira uma história emocionante.
+        </p>
+        <div class="mini-badge">Lágrimas de alegria garantidas</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Depoimentos - Antes e Depois -->
+<section class="testimonials">
+  <div class="container">
+    <h2 data-aos="fade-up" class="section-title">
+      Amor que volta em dobro
+    </h2>
+
+    <div class="testimonials-grid">
+      <!-- Card 1 -->
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="before-after">
+          <div class="image-wrapper">
+            <img src="assets/antes-poddle.png" alt="Antes - Nick na rua" class="before-img">
+            <div class="label before-label">Antes</div>
+          </div>
+          <div class="image-wrapper">
+            <img src="assets/depois-poddle.png" alt="Depois - Nick adotado" class="after-img">
+            <div class="label after-label">Depois</div>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <p>
+            “Em menos de 48h o Nick já estava no meu colo. O PetGo mudou nossas vidas!”
+          </p>
+          <strong>— Mariana & Nick, São Paulo</strong>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="before-after">
+          <div class="image-wrapper">
+            <img src="assets/antes-pitbull.png" alt="Antes - Mel abandonada" class="before-img">
+            <div class="label before-label">Antes</div>
+          </div>
+          <div class="image-wrapper">
+            <img src="assets/depois-pitbull.png" alt="Depois - Mel feliz no novo lar" class="after-img">
+            <div class="label after-label">Depois</div>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <p>
+            “Achei a Mel pelo mapa do PetGo. Hoje ela é minha companheira inseparável.”
+          </p>
+          <strong>— João & Mel, Rio de Janeiro</strong>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="before-after">
+          <div class="image-wrapper">
+            <img src="assets/antes-gato.jpg" alt="Antes - Luna assustada" class="before-img">
+            <div class="label before-label">Antes</div>
+          </div>
+          <div class="image-wrapper">
+            <img src="assets/depois-gato.jpg" alt="Depois - Luna no sofá" class="after-img">
+            <div class="label after-label">Depois</div>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <p>
+            “Nunca imaginei que um app pudesse salvar uma vida. Obrigado PetGo!”
+          </p>
+          <strong>— Ana & Luna, Belo Horizonte</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+   <!-- CTA Final -->
+<section class="cta-final">
+  <div class="container">
+    <div class="cta-content">
+      <!-- Título com emoção -->
+      <h2 data-aos="fade-up">
+        <span class="highlight-text">Um toque pode salvar uma vida</span><br>
+        Você está pronto para ser o herói de alguém hoje?
+      </h2>
+
+      <p data-aos="fade-up" data-aos-delay="300" class="cta-subtitle">
+        Mais de <strong>28.000 pessoas</strong> já baixaram o PetGo e ajudaram<br class="desktop-only">
+        animais abandonados a encontrarem um lar cheio de amor.
+      </p>
+
+      <!-- Botão gigante e irresistível -->
+      <div class="cta-button-wrapper" data-aos="zoom-in" data-aos-delay="600">
+        <a href="src/app-release.apk" class="btn-cta-huge" download>
+          <div class="btn-icon">
+            <img src="assets/android-icone.png" alt="Android" class="android-white">
+          </div>
+          <div class="btn-text">
+            <span class="small">Baixar grátis agora</span>
+            <span class="big">PetGo para Android</span>
+          </div>
+          <div class="pulse-ring"></div>
+        </a>
+      </div>
+
+      <!-- Confiança + urgência -->
+      <div class="trust-badges" data-aos="fade-up" data-aos-delay="900">
+        <div class="badge">
+          <span>Seguro & verificado</span>
+        </div>
+        <div class="badge">
+          <span>Sem anúncios</span>
+        </div>
+        <div class="badge">
+          <span>Instalação em 20 segundos</span>
+        </div>
+      </div>
+
+      <p class="urgency-text" data-aos="fade-up" data-aos-delay="1100">
+        A cada minuto, outro animal precisa de ajuda.<br>
+        <strong>Baixe agora — ele pode estar esperando por você.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>
+          © 2025 PetGo • Feito com muito ❤️ por quem acredita que todo animal
+          merece um lar
+        </p>
+        <div class="footer-links">
+          <a href="#">Termos de Uso</a> •
+          <a href="#">Política de Privacidade</a> •
+          <a href="mailto:contato@petgo.app">Contato</a>
+        </div>
+        <div class="social">
+          <a href="#">Instagram</a> • <a href="#">TikTok</a> •
+          <a href="#">WhatsApp</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
