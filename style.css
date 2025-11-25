@@ -245,6 +245,77 @@ p { font-size: 1.2rem; margin-bottom: 1.5rem; }
   line-height: 1.8;
   color: #444;
 }
+
+/* Vídeos: seção de resgates e finais felizes */
+.videos {
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  text-align: center;
+}
+.videos .section-title {
+  color: #1F497D;
+  margin-bottom: 0.25rem;
+}
+.videos .lead {
+  max-width: 820px;
+  margin: 0 auto 2rem;
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.videos-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* sempre em coluna conforme solicitado */
+  gap: 24px;
+  max-width: 1180px; /* aumente a largura disponível para vídeos maiores */
+  margin: 0 auto;
+  align-items: start;
+}
+.video-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(31,73,125,0.06);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200px;
+}
+.video-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 80px rgba(31,73,125,0.12);
+}
+.video-media {
+  width: 100%;
+  background: #000;
+}
+.video-media video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  max-height: 520px; /* maior altura para telas maiores */
+}
+.video-caption {
+  padding: 14px 18px;
+  font-weight: 700;
+  color: #1F497D;
+  background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(248,249,250,0.95));
+  text-align: left;
+}
+
+@media (max-width: 992px) {
+  .videos-grid { gap: 22px; }
+}
+
+@media (max-width: 768px) {
+  .videos { padding: 60px 16px; }
+  .videos-grid { grid-template-columns: 1fr; }
+  .video-media video { max-height: 360px; }
+  .video-caption { text-align: center; }
+}
+
 .mission-content .lead { font-size: 1.5rem; margin-bottom: 1.8rem; }
 .mission-content .strong {
   font-weight: 700;
